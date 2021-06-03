@@ -41,7 +41,7 @@
 		var x = e.clientX;
 		var y = e.clientY;
 
-		createFireworks(x, y,["一二三四五","上山打老虎","老虎没打到"][Math.floor(Math.random()*3)]);
+		createFireworks(x, y,["热烈祝贺小吴","6月3日","没有抽一根烟","数据表明，中国吸烟者每天平均抽15.2根烟","你已经超越了99%的人","希望小吴戒烟成功","人长的越来越漂亮","皮肤越来越好","钱越来越多","打游戏不会遇见坑比","早日找到喜欢的弟弟"][Math.floor(Math.random()*3)]);
 	}
 	document.addEventListener("mousedown", mouseDownHandler);
 

@@ -1,4 +1,4 @@
-﻿javascript:
+javascript:
 !(function () {
 	var textCanvas = document.createElement("canvas");
 	textCanvas.width=1000;
@@ -41,7 +41,17 @@
 		var x = e.clientX;
 		var y = e.clientY;
 
-		createFireworks(x, y,["热烈祝贺小吴","6月3日","没有抽一根烟","数据表明，中国吸烟者每天平均抽15.2根烟","你已经超越了99%的人","希望小吴戒烟成功","人长的越来越漂亮","皮肤越来越好","钱越来越多","打游戏不会遇见坑比","早日找到喜欢的弟弟"][Math.floor(Math.random()*3)]);
+		createFireworks(x, y,[
+			"小吴六月三日没有抽烟",
+			"希望小吴戒烟成功",
+			"小吴长的越来越漂亮",
+			"小吴皮肤越来越好",
+			"小吴钱越来越多",
+			"小吴打游戏不会遇见坑",
+			"小吴找到喜欢的弟弟",
+			"小吴最酷",
+			"小吴漂亮，美丽，大方，高贵，优雅",
+		][Math.floor(Math.random()*9)]);
 	}
 	document.addEventListener("mousedown", mouseDownHandler);
 
@@ -49,19 +59,19 @@
 
 	function createFireworks(x, y,text="") {
 
-		var hue = Math.random() * 360;
+		var hue = Math.random() * 460;
 		var hueVariance = 30;
 
 		function setupColors(p){
 			p.hue = Math.floor(Math.random() * ((hue + hueVariance) - (hue - hueVariance))) + (hue - hueVariance);
 			p.brightness = Math.floor(Math.random() * 21) + 50;
-			p.alpha = (Math.floor(Math.random() * 61) + 40) / 100;
+			p.alpha = (Math.floor(Math.random() * 61) + 40) / 150;
 		}
 
 		if(text!=""){
 			
 			var gap = 6;
-			var fontSize = 120;
+			var fontSize = 100;
 
 			textctx.font=fontSize+"px Verdana";
 			textctx.fillStyle = "#ffffff";
